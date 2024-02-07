@@ -1,4 +1,4 @@
-dpkg -i docker -y
+sudo apt install docker -y
 ls
 docker pull honeygain/honeygain
 ls
