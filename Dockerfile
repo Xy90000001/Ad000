@@ -6,9 +6,12 @@ RUN /bin/sh -c adduser --gecos "" --disabled-password --home /app appuser
 ARG TARGETOS
 ARG TARGETARCH
 USER appuser
+RUN ls -l -a
 COPY ./linux_amd64/bin/honeygain /app
 COPY ./linux_amd64/bin/libhg.so* /usr/lib/
-COPY ./linux_amd64/bin/libmsquic.so.2* /usr/lib/ 
+COPY ./linux_amd64/bin/libmsquic.so.2* /usr/lib/
+RUN ls
 ENV LD_LIBRARY_PATH=/usr/lib
+RUN ls -l -a
 WORKDIR /app
 ENTRYPOINT ["./honeygain"]
