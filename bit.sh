@@ -1,0 +1,1 @@
+docker run -it --mount type=volume,source="bitpingd-volume",target=/root/.bitpingd --entrypoint /app/bitpingd bitping/bitpingd:latest login --email "xy90000001@gmail.com" --password "xy90000001@gmail.com"
