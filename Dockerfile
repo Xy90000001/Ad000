@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-RUN apt install wget
+RUN apt-get update 
+RUN apt-get install wget
 RUN apt install curl
 RUN curl -o "https://cdn.pawns.app/download/cli/latest/linux_x86_64/pawns-cli"
 RUN ls
